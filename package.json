@@ -1,0 +1,12 @@
+{
+  "name": "browser-agent",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @browser-agent/api --filter @browser-agent/extension dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "db:up": "docker compose up -d parser postgres redis minio",
+    "db:down": "docker compose down"
+  }
+}

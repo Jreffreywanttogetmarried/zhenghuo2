@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Agent",
+  "version": "0.1.0",
+  "description": "Safely operate the current browser through a conversation.",
+  "permissions": ["sidePanel", "storage", "tabs", "activeTab", "scripting"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "action": {"default_title": "Open Browser Agent"},
+  "side_panel": {"default_path": "sidepanel/index.html"},
+  "commands": {"open-agent": {"suggested_key": {"default": "Ctrl+Shift+Y"}, "description": "Open Browser Agent"}},
+  "host_permissions": []
+}
